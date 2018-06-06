@@ -19,6 +19,7 @@ a {
     width: 300px;
     height: 100%;
     color: white;
+    transition: all .2s ease-in;
 }
 .content {
     grid-column-start: 2;
@@ -36,11 +37,11 @@ a {
     left: 0;
     right: 0;
 }
-.title h1{
+.platzi-title{
     font-size: 35px;
     color: white;
 }
-.title span {
+.platzi-title span {
     background: linear-gradient(to right, #ff0849, #ff0066, #ff0085, #ff00a6, #ff00c8);
     color: transparent;
     -webkit-background-clip: text;
@@ -67,7 +68,6 @@ a {
 .friend img {
     width: 75px;
     height: 75px;
-    border-image: radial-gradient(circle, #24e2ff, #00c6ff, #979cff, #e75fd0, #fd0a69);
     border-radius: 50%;
 }
 .settings {
@@ -94,6 +94,9 @@ a {
 .wrapper {
     padding: 0 40px;
     box-sizing: border-box;
+}
+.hidden {
+    display: none!important;
 }
 .video-title {
     font-size: 25px;
@@ -226,4 +229,56 @@ input {
     font-size: 18px;
     font-weight: bold;
     margin-top: 5px;
+}
+.nav-hidden {
+    padding: 0 50px;
+    align-items: center;
+    height: 80px;
+    background: linear-gradient(to right, #1c2772, #272270, #311b6e, #3a136b, #420667);
+    display: none;
+}
+.menu {
+    font-size: 40px;
+    color: white;
+    margin-right: 25px;
+    cursor: pointer;
+}
+.show-nav {
+    left: 0!important;
+}
+@media only screen and (max-width : 992px) {
+    .heading {
+        display: flex;
+        align-items: center;
+    }
+    .hidden {
+        margin-right: 5px;
+        display: inline-block!important;
+    }
+    .nav-hidden {
+        display: flex;
+    }
+    .container {
+        grid-template-columns: 1fr;
+    }
+    .navbar-playlist {
+        left: -300px;
+        z-index: 20;
+    }
+    .features-video {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 45px);
+        grid-gap: 15px;
+    }
+    .video-tags{
+        justify-content: start;
+    }
+    .tag {
+        margin-right: 5px;
+    }
+}
+@media only screen and (max-width : 768px) {
+    .video-sections {
+        grid-template-columns: 1fr;
+    }
 }

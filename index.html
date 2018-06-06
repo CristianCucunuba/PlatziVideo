@@ -10,10 +10,13 @@
     </head>
     <body>
         <div class="container">
-            <div class="navbar-playlist">
-                <a href="#" class="title">
-                    <h1>Platzi<span>Video</span></h1>
-                </a>
+            <div id="navbar-playlist" class="navbar-playlist">
+                <div class="heading">
+                    <span id="close-nav" class="fas fa-bars menu hidden"></span>
+                    <a href="#" class="title">
+                        <h1 class="platzi-title">Platzi<span>Video</span></h1>
+                    </a>
+                </div>
                 <div class="video-playlist">
                     <ol>
                         <li>5 Reasons To Chose a Notebook Over A computer Desktop</li>
@@ -63,6 +66,12 @@
                 </div>
             </div>
             <div class="content">
+                <div class="nav-hidden">
+                    <span id="burguer-menu" class="fas fa-bars menu"></span>
+                    <a href="">
+                        <h1 class="platzi-title">Platzi<span>Video</span></h1>
+                    </a>
+                </div>
                 <div class="container-video">
                     <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/2gUtfBmw86Y" frameborder="0"></iframe>
                 </div>
@@ -151,4 +160,15 @@
             </div>
         </div>
     </body>
+    <script>
+        let $navbarPlaylist = document.getElementById('navbar-playlist')
+        let $burguerMenu = document.getElementById('burguer-menu')
+        let $closeMenu = document.getElementById('close-nav')
+        $burguerMenu.addEventListener("click", () => {
+            $navbarPlaylist.classList.add('show-nav')
+        })
+        $closeMenu.addEventListener("click", () => {
+            $navbarPlaylist.classList.remove('show-nav')
+        })
+    </script>
 </html>
