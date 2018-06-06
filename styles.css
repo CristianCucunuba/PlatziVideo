@@ -77,7 +77,7 @@ a {
 }
 .settings a {
     color: white;
-    font-size: 20px;
+    font-size: 15px;
     margin: 5px;
 }
 .settings span {
@@ -159,11 +159,71 @@ a {
     height: 100%;
 }
 .video-suggest{
+    background-color: black;
     position: relative;
+}
+.suggest-video-container {
+    margin-bottom: 40px;
 }
 .play-button,
 .video-timing {
     position: absolute;
-    top: 0;
+}
+.play-button {
+    top: calc(50% - 40px);
+    right: calc(50% - 40px);
+    display: none;
+}
+.play-button span {
+    font-size: 80px;
+    color: white;
+}
+.video-timing {
+    color: white;
+    right: 5%;
+    bottom: 5%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.521);
+    border-radius: 5px;
+    display: none;
+}
+.video-suggest:hover .play-button,
+.video-suggest:hover .video-timing {
+    display: initial;
+}
+.video-suggest:hover img {
+    opacity: .5;
 }
 
+input {
+    width: 90%;
+    padding: 5px;
+    height: 15px;
+}
+.comments-section p:first-child,
+.suggests-section p:first-child {
+    font-size: 20px;
+    font-weight: bold;
+}
+.comments-container {
+    margin-top: 20px;
+}
+.comment {
+    display: flex;
+    align-items: center;
+}
+.comment img {
+    width: 90px;
+    border-radius: 50%;
+}
+.comment p {
+    margin: 0;
+}
+.profile-info {
+    margin-left: 10px;
+}
+.video-suggest-description {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 5px;
+}
